@@ -15,11 +15,8 @@ export default function HomePage() {
   return (
     <>
       {/* ─── HERO ─── */}
-      <section
-        style={{ minHeight: '100vh', position: 'relative', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}
-      >
-        <div className="container" style={{ paddingTop: 80, paddingBottom: 40 }}>
-          {/* Small label */}
+      <section className="hero-section">
+        <div className="container" style={{ paddingTop: 80, paddingBottom: 40, flex: 1 }}>
           <p
             style={{
               fontSize: 11,
@@ -33,15 +30,7 @@ export default function HomePage() {
           </p>
 
           {/* Asymmetric hero grid */}
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: '60% 40%',
-              gap: '48px',
-              alignItems: 'center',
-            }}
-            className="flex-col md:grid"
-          >
+          <div className="hero-grid">
             {/* Left: Big name */}
             <div>
               <HeroText />
@@ -60,10 +49,7 @@ export default function HomePage() {
 
             {/* Right: Squircle + CTAs */}
             <div className="flex flex-col items-center gap-8">
-              <div
-                className="hero-squircle"
-                style={{ width: 320, height: 380 }}
-              >
+              <div className="hero-squircle" style={{ width: 320, height: 380 }}>
                 <span style={{ fontSize: 72, fontWeight: 700 }}>BA</span>
               </div>
 
@@ -85,32 +71,16 @@ export default function HomePage() {
       {/* ─── INTRO / STATS ─── */}
       <section className="section-pad">
         <div className="container">
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: '1fr 1fr',
-              gap: 80,
-              alignItems: 'center',
-            }}
-            className="flex-col md:grid"
-          >
+          <div className="two-col-grid">
             {/* Stats cluster */}
             <ScrollReveal>
-              <div
-                style={{
-                  display: 'grid',
-                  gridTemplateColumns: '1fr 1px 1fr',
-                  gridTemplateRows: '1fr 1px 1fr',
-                  gap: 40,
-                  alignItems: 'start',
-                }}
-              >
+              <div className="stats-grid">
                 <CounterStat value={15} suffix="+" label="Years of Experience" />
-                <div className="v-divider" style={{ gridRow: '1 / 3' }} />
+                <div className="v-divider stats-vdivider" />
                 <CounterStat value={500} suffix="+" label="Students Mentored" />
-                <div style={{ gridColumn: '1 / 4', height: 1, background: 'var(--black)' }} />
+                <div className="stats-hdivider" />
                 <CounterStat value={80} suffix="+" label="Workshops Conducted" />
-                <div className="v-divider" style={{ gridRow: '3 / 5' }} />
+                <div className="v-divider stats-vdivider-2" />
                 <CounterStat value={12} label="Research Publications" />
               </div>
             </ScrollReveal>

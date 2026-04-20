@@ -6,6 +6,7 @@ import Footer from '@/components/Footer';
 import CustomCursor from '@/components/CustomCursor';
 import PageCurtain from '@/components/PageCurtain';
 import PageTransitionWrapper from '@/components/PageTransitionWrapper';
+import GSAPScrollInit from '@/components/GSAPScrollInit';
 
 export const metadata: Metadata = {
   title: {
@@ -30,6 +31,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <CustomCursor />
           <PageCurtain />
           <Nav />
+          <GSAPScrollInit />
           <PageTransitionWrapper>
             <main>{children}</main>
           </PageTransitionWrapper>

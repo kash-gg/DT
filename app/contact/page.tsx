@@ -64,8 +64,8 @@ export default function ContactPage() {
       <section className="section-pad">
         <div className="container">
           <div
-            style={{ display: 'grid', gridTemplateColumns: '40% 60%', gap: 80, alignItems: 'start' }}
-            className="flex-col md:grid"
+            className="two-col-grid"
+            style={{ alignItems: 'start' }}
           >
             {/* Left: Info */}
             <ScrollReveal>

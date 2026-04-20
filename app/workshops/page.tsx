@@ -62,7 +62,7 @@ export default function WorkshopsPage() {
       <section style={{ borderTop: '1px solid #0a0a0a', padding: '80px 0' }}>
         <div className="container">
           <ScrollReveal>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 64, alignItems: 'center' }} className="flex-col md:grid">
+            <div className="two-col-grid">
               <div>
                 <h2 style={{ fontSize: 'clamp(32px, 4vw, 56px)', fontWeight: 700, lineHeight: 1.1, marginBottom: 24 }}>
                   Bring a Workshop to Your <em style={{ fontStyle: 'italic', fontWeight: 300 }}>Organisation</em>

@@ -35,7 +35,7 @@ export default function BlogPage() {
             <p style={{ fontSize: 11, fontWeight: 300, textTransform: 'uppercase', letterSpacing: '0.15em', marginBottom: 24 }}>
               Latest
             </p>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 64, alignItems: 'end' }} className="flex-col md:grid">
+            <div className="two-col-grid">
               <div>
                 <h2 style={{ fontSize: 'clamp(28px, 4vw, 52px)', fontWeight: 700, lineHeight: 1.15, marginBottom: 24 }}>
                   {blogPosts[0].title}

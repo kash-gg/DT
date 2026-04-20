@@ -35,10 +35,7 @@ export default function AboutPage() {
       {/* ─── HERO ─── */}
       <section style={{ minHeight: '60vh', display: 'flex', alignItems: 'center', borderBottom: '1px solid #0a0a0a' }}>
         <div className="container" style={{ paddingTop: 80, paddingBottom: 80 }}>
-          <div
-            style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 64, alignItems: 'center' }}
-            className="flex-col md:grid"
-          >
+          <div className="two-col-grid">
             {/* Left heading */}
             <div>
               <h1 style={{ fontSize: 'clamp(60px, 9vw, 120px)', lineHeight: 1, marginBottom: 8 }}>
@@ -82,7 +79,7 @@ export default function AboutPage() {
       {/* ─── STORY ─── */}
       <section className="section-pad" style={{ borderBottom: '1px solid #0a0a0a' }}>
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 80 }} className="flex-col md:grid">
+          <div className="two-col-grid">
             <ScrollReveal>
               <h2 style={{ fontSize: 'clamp(36px, 5vw, 64px)', fontWeight: 700, lineHeight: 1.1, marginBottom: 32 }}>
                 The <em style={{ fontStyle: 'italic', fontWeight: 300 }}>Journey</em>

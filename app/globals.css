@@ -507,8 +507,65 @@ img {
   color: var(--white-smoke);
 }
 
+/* ─── LAYOUT GRIDS ─── */
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  gap: 48px;
+  align-items: center;
+}
+
+.two-col-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  grid-template-rows: auto 1px auto;
+  gap: 40px;
+  align-items: start;
+}
+
+.stats-vdivider {
+  grid-row: 1 / 2;
+}
+
+.stats-vdivider-2 {
+  grid-row: 3 / 4;
+}
+
+.stats-hdivider {
+  grid-column: 1 / 4;
+  height: 1px;
+  background: var(--black);
+}
+
 /* ─── RESPONSIVE ─── */
 @media (max-width: 768px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .two-col-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr 1px 1fr;
+  }
+
   .workshop-pill {
     height: auto;
     min-height: 120px;
@@ -518,14 +575,22 @@ img {
     padding: 24px 32px;
     gap: 16px;
   }
+
   .pub-row {
     grid-template-columns: 1fr;
     gap: 12px;
   }
+
   .expertise-card {
     padding: 32px;
   }
+
   .mobile-menu a {
     font-size: 32px;
+  }
+
+  .hero-squircle {
+    width: 240px !important;
+    height: 280px !important;
   }
 }
