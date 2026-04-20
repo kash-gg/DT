@@ -1,6 +1,5 @@
 'use client';
 
-import type { Metadata } from 'next';
 import { useState } from 'react';
 import ScrollReveal from '@/components/ScrollReveal';
 import MarqueeButton from '@/components/MarqueeButton';

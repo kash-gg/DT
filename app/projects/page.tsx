@@ -2,10 +2,8 @@
 
 import { useState } from 'react';
 import ProjectCard from '@/components/ProjectCard';
-import ScrollReveal from '@/components/ScrollReveal';
 import Ticker from '@/components/Ticker';
 import { projects } from '@/lib/data';
-import type { Project } from '@/lib/data';
 
 const FILTERS = ['All', 'Innovation', 'Research', 'Mentorship'] as const;
 type Filter = typeof FILTERS[number];
