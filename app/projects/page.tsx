@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import ProjectCard from '@/components/ProjectCard';
-import Ticker from '@/components/Ticker';
 import { projects } from '@/lib/data';
 
 const FILTERS = ['All', 'Innovation', 'Research', 'Mentorship'] as const;
@@ -29,7 +28,6 @@ export default function ProjectsPage() {
         </div>
       </section>
 
-      <Ticker />
 
       {/* ─── FILTER TABS ─── */}
       <section style={{ padding: '40px 0', borderBottom: '1px solid #0a0a0a' }}>

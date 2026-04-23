@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import BlogCard from '@/components/BlogCard';
 import ScrollReveal from '@/components/ScrollReveal';
-import Ticker from '@/components/Ticker';
 import { blogPosts } from '@/lib/data';
 
 export const metadata: Metadata = {
@@ -26,7 +25,6 @@ export default function BlogPage() {
         </div>
       </section>
 
-      <Ticker />
 
       {/* ─── FEATURED POST ─── */}
       <section style={{ padding: '80px 0', borderBottom: '1px solid #0a0a0a' }}>

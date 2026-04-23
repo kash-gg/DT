@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useColorScheme, SCHEMES } from './ColorSchemeContext';
+import { useEditMode } from './EditModeContext';
 
 const NAV_LINKS = [
   { label: 'About',      href: '/about' },
@@ -18,6 +19,7 @@ const NAV_LINKS = [
 export default function Nav() {
   const pathname = usePathname();
   const { scheme, setScheme } = useColorScheme();
+  const { isEditMode, setIsEditMode } = useEditMode();
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
@@ -45,8 +47,17 @@ export default function Nav() {
             ))}
           </nav>
 
-          {/* Right: scheme switcher + hamburger */}
+          {/* Right: edit toggle + scheme switcher + hamburger */}
           <div className="flex items-center gap-4">
+            {/* Edit Mode Toggle */}
+            <button
+              onClick={() => setIsEditMode(!isEditMode)}
+              className={`text-xs px-3 py-1.5 rounded-full font-medium transition-colors border ${isEditMode ? 'bg-blue-500 text-white border-blue-600' : 'bg-black/5 border-black/10 text-gray-600 hover:bg-black/10'}`}
+              title="Toggle Inline Editor (Cmd/Ctrl + E)"
+            >
+              {isEditMode ? 'Editing' : 'Edit'}
+            </button>
+
             {/* Scheme switcher */}
             <div className="flex items-center gap-2">
               {SCHEMES.map(s => (

@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import ScrollReveal from '@/components/ScrollReveal';
-import Ticker from '@/components/Ticker';
 import MarqueeButton from '@/components/MarqueeButton';
 
 export const metadata: Metadata = {
@@ -107,7 +106,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <Ticker />
 
       {/* ─── STORY ─── */}
       <section className="section-pad" style={{ borderBottom: '1px solid #0a0a0a' }}>

@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import ExpertiseCard from '@/components/ExpertiseCard';
 import ScrollReveal from '@/components/ScrollReveal';
-import Ticker from '@/components/Ticker';
 import MarqueeButton from '@/components/MarqueeButton';
 import { expertise } from '@/lib/data';
 
@@ -27,7 +26,6 @@ export default function ExpertisePage() {
         </div>
       </section>
 
-      <Ticker />
 
       {/* ─── GRID ─── */}
       <section className="section-pad">

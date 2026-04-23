@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import PublicationRow from '@/components/PublicationRow';
 import ScrollReveal from '@/components/ScrollReveal';
-import Ticker from '@/components/Ticker';
 import MarqueeButton from '@/components/MarqueeButton';
 import { publications } from '@/lib/data';
 
@@ -27,7 +26,6 @@ export default function ResearchPage() {
         </div>
       </section>
 
-      <Ticker />
 
       {/* ─── STATS BAR ─── */}
       <section style={{ padding: '48px 0', borderBottom: '1px solid #0a0a0a' }}>

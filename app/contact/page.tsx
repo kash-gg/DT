@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import ScrollReveal from '@/components/ScrollReveal';
 import MarqueeButton from '@/components/MarqueeButton';
-import Ticker from '@/components/Ticker';
 
 const SUBJECTS = [
   'Collaboration',
@@ -58,7 +57,6 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <Ticker />
 
       {/* ─── CONTACT LAYOUT ─── */}
       <section className="section-pad">

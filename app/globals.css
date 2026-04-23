@@ -190,26 +190,19 @@ img {
 }
 
 .btn-marquee.hovered {
-  background: #1d1d1f;
-  border-color: #1d1d1f;
-  color: #ffffff;
-  transform: scale(1.02);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 1);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 10px 30px rgba(0, 113, 227, 0.2);
+  border-color: rgba(0, 113, 227, 0.4);
+  color: #0071e3;
 }
 
 .btn-marquee.hovered .btn-static {
-  opacity: 0;
-}
-
-.btn-marquee.hovered .btn-scroll {
   opacity: 1;
 }
 
-.btn-marquee.hovered .btn-scroll-inner {
-  animation: btn-marquee-anim 2s linear infinite;
-  display: inline-flex;
-  gap: 0;
-  white-space: nowrap;
+.btn-marquee.hovered .btn-scroll {
+  opacity: 0;
 }
 
 /* ─── CUSTOM CURSOR ─── */

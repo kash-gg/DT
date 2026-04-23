@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import EditableText from './EditableText';
 
 export default function HeroText() {
   const ref = useRef<HTMLDivElement>(null);
@@ -28,25 +29,20 @@ export default function HeroText() {
       <h1
         style={{
           fontFamily: 'var(--font-display)',
-          fontSize: 'clamp(72px, 10vw, 140px)',
+          fontSize: 'clamp(56px, 8vw, 110px)',
           lineHeight: 1.0,
           fontWeight: 800,
           letterSpacing: '-0.04em',
+          textAlign: 'left',
+          marginBottom: '20px',
         }}
       >
-        <span className="hero-word text-transparent bg-clip-text bg-gradient-to-br from-gray-900 to-gray-500" style={wordStyle}>Bhavna</span>
-      </h1>
-      <h1
-        style={{
-          fontFamily: 'var(--font-display)',
-          fontSize: 'clamp(72px, 10vw, 140px)',
-          lineHeight: 1.0,
-          fontWeight: 800,
-          letterSpacing: '-0.04em',
-          marginLeft: '8%',
-        }}
-      >
-        <span className="hero-word text-transparent bg-clip-text bg-gradient-to-r from-gray-700 to-gray-400" style={{ ...wordStyle, transitionDelay: '0.98s' }}>Ambudkar</span>
+        <EditableText 
+          id="hero-name" 
+          defaultText="Bhavna Ambudkar" 
+          className="hero-word text-transparent bg-clip-text bg-gradient-to-br from-gray-900 to-gray-500" 
+          style={wordStyle} 
+        />
       </h1>
     </div>
   );

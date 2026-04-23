@@ -7,6 +7,8 @@ import CustomCursor from '@/components/CustomCursor';
 import PageCurtain from '@/components/PageCurtain';
 import PageTransitionWrapper from '@/components/PageTransitionWrapper';
 import GSAPScrollInit from '@/components/GSAPScrollInit';
+import { EditModeProvider } from '@/components/EditModeContext';
+import { getContent } from '@/app/actions';
 
 export const metadata: Metadata = {
   title: {
@@ -23,20 +25,24 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const initialContent = await getContent();
+
   return (
     <html lang="en">
       <body>
-        <ColorSchemeProvider>
-          <CustomCursor />
-          <PageCurtain />
-          <Nav />
-          <GSAPScrollInit />
-          <PageTransitionWrapper>
-            <main>{children}</main>
-          </PageTransitionWrapper>
-          <Footer />
-        </ColorSchemeProvider>
+        <EditModeProvider initialContent={initialContent}>
+          <ColorSchemeProvider>
+            <CustomCursor />
+            <PageCurtain />
+            <Nav />
+            <GSAPScrollInit />
+            <PageTransitionWrapper>
+              <main>{children}</main>
+            </PageTransitionWrapper>
+            <Footer />
+          </ColorSchemeProvider>
+        </EditModeProvider>
       </body>
     </html>
   );

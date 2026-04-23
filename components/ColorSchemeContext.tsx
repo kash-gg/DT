@@ -4,8 +4,6 @@ import React, { createContext, useContext, useEffect, useState } from 'react';
 
 export const SCHEMES = [
   { name: 'Frost', value: '#fbfbfd' },
-  { name: 'Silver',  value: '#e3e4e5' },
-  { name: 'Rose Gold',  value: '#f9f0f1' },
   { name: 'Starlight',  value: '#f8f4f0' },
 ];
 

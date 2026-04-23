@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import WorkshopPill from '@/components/WorkshopPill';
 import ScrollReveal from '@/components/ScrollReveal';
-import Ticker from '@/components/Ticker';
 import MarqueeButton from '@/components/MarqueeButton';
 import { workshops } from '@/lib/data';
 
@@ -27,7 +26,6 @@ export default function WorkshopsPage() {
         </div>
       </section>
 
-      <Ticker />
 
       {/* ─── INTRO ─── */}
       <section style={{ padding: '80px 0', borderBottom: '1px solid #0a0a0a' }}>

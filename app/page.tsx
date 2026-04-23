@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
-import Ticker from '@/components/Ticker';
 import MarqueeButton from '@/components/MarqueeButton';
 import CounterStat from '@/components/CounterStat';
 import ScrollReveal from '@/components/ScrollReveal';
 import HeroText from '@/components/HeroText';
+import EditableText from '@/components/EditableText';
 
 export const metadata: Metadata = {
   title: 'Bhavna Ambudkar — Design Thinking Professor',
@@ -17,7 +17,10 @@ export default function HomePage() {
       {/* ─── HERO ─── */}
       <section className="hero-section">
         <div className="container" style={{ paddingTop: 80, paddingBottom: 40, flex: 1 }}>
-          <p
+          <EditableText
+            id="hero-subtitle"
+            defaultText="Professor & Innovation Catalyst"
+            as="p"
             style={{
               fontSize: 11,
               fontWeight: 300,
@@ -25,9 +28,7 @@ export default function HomePage() {
               letterSpacing: '0.2em',
               marginBottom: 48,
             }}
-          >
-            Professor &amp; Innovation Catalyst
-          </p>
+          />
 
           {/* Asymmetric hero grid */}
           <div className="hero-grid">
@@ -35,16 +36,17 @@ export default function HomePage() {
             <div>
               <HeroText />
               <div className="divider" style={{ margin: '32px 0 24px' }} />
-              <p
+              <EditableText
+                id="hero-role"
+                defaultText="Design Thinking ✦ SIT Pune"
+                as="p"
                 style={{
                   fontSize: 16,
                   fontWeight: 300,
                   textTransform: 'uppercase',
                   letterSpacing: '0.15em',
                 }}
-              >
-                Design Thinking ✦ SIT Pune
-              </p>
+              />
             </div>
 
             {/* Right: Squircle + CTAs */}
@@ -62,7 +64,6 @@ export default function HomePage() {
         </div>
 
         {/* Bottom ticker */}
-        <Ticker />
       </section>
 
       {/* ─── DIVIDER ─── */}
@@ -107,7 +108,6 @@ export default function HomePage() {
       </section>
 
       {/* ─── TICKER 2 ─── */}
-      <Ticker />
 
       {/* ─── EXPERTISE TEASER ─── */}
       <section className="section-pad">
