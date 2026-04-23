@@ -3,10 +3,10 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 
 export const SCHEMES = [
-  { name: 'White Smoke', value: '#f4f4f4' },
-  { name: 'Fall Green',  value: '#dae8b6' },
-  { name: 'Blue Chalk',  value: '#dcd5ea' },
-  { name: 'Misty Rose',  value: '#ffd3f1' },
+  { name: 'Frost', value: '#fbfbfd' },
+  { name: 'Silver',  value: '#e3e4e5' },
+  { name: 'Rose Gold',  value: '#f9f0f1' },
+  { name: 'Starlight',  value: '#f8f4f0' },
 ];
 
 interface ColorSchemeContextValue {
@@ -15,12 +15,12 @@ interface ColorSchemeContextValue {
 }
 
 const ColorSchemeContext = createContext<ColorSchemeContextValue>({
-  scheme: '#f4f4f4',
+  scheme: '#fbfbfd',
   setScheme: () => {},
 });
 
 export function ColorSchemeProvider({ children }: { children: React.ReactNode }) {
-  const [scheme, setSchemeState] = useState('#f4f4f4');
+  const [scheme, setSchemeState] = useState('#fbfbfd');
 
   useEffect(() => {
     const stored = localStorage.getItem('color-scheme');

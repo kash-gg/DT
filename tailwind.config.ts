@@ -15,10 +15,19 @@ const config: Config = {
         'fall-green': '#dae8b6',
         'blue-chalk': '#dcd5ea',
         'misty-rose': '#ffd3f1',
+        'glass-white': 'rgba(255, 255, 255, 0.05)',
+        'glass-border': 'rgba(255, 255, 255, 0.1)',
+        'accent-cyan': '#00f2fe',
+        'accent-blue': '#4facfe',
       },
       fontFamily: {
-        sans: ['DM Sans', 'Syne', 'sans-serif'],
+        sans: ['Inter', 'sans-serif'],
+        display: ['Outfit', 'sans-serif'],
       },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-primary': 'linear-gradient(to right, #4facfe 0%, #00f2fe 100%)',
+      }
     },
   },
   plugins: [],

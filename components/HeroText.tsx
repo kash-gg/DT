@@ -27,25 +27,26 @@ export default function HeroText() {
     <div ref={ref}>
       <h1
         style={{
+          fontFamily: 'var(--font-display)',
           fontSize: 'clamp(72px, 10vw, 140px)',
           lineHeight: 1.0,
-          fontWeight: 700,
-          letterSpacing: '-0.02em',
+          fontWeight: 800,
+          letterSpacing: '-0.04em',
         }}
       >
-        <span className="hero-word" style={wordStyle}>Bhavna</span>
+        <span className="hero-word text-transparent bg-clip-text bg-gradient-to-br from-gray-900 to-gray-500" style={wordStyle}>Bhavna</span>
       </h1>
       <h1
         style={{
+          fontFamily: 'var(--font-display)',
           fontSize: 'clamp(72px, 10vw, 140px)',
           lineHeight: 1.0,
-          fontWeight: 300,
-          fontStyle: 'italic',
-          letterSpacing: '-0.02em',
+          fontWeight: 800,
+          letterSpacing: '-0.04em',
           marginLeft: '8%',
         }}
       >
-        <span className="hero-word" style={{ ...wordStyle, transitionDelay: '0.98s' }}>Ambudkar</span>
+        <span className="hero-word text-transparent bg-clip-text bg-gradient-to-r from-gray-700 to-gray-400" style={{ ...wordStyle, transitionDelay: '0.98s' }}>Ambudkar</span>
       </h1>
     </div>
   );

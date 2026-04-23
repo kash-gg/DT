@@ -22,11 +22,11 @@ export default function Nav() {
 
   return (
     <>
-      <header
-        style={{ backgroundColor: scheme }}
-        className="sticky top-0 z-50 border-b border-[#0a0a0a] transition-colors duration-400"
-      >
-        <div className="container flex items-center justify-between h-16">
+      <header className="fixed top-6 left-1/2 -translate-x-1/2 w-[95%] max-w-5xl z-50 transition-all duration-400">
+        <div 
+          style={{ backgroundColor: 'var(--glass-bg)' }}
+          className="border border-white/60 backdrop-blur-2xl shadow-lg rounded-full px-8 flex items-center justify-between h-16"
+        >
           {/* Logo */}
           <Link href="/" className="font-medium text-base tracking-tight" style={{ fontWeight: 500 }}>
             Bhavna Ambudkar
