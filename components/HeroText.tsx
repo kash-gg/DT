@@ -26,21 +26,11 @@ export default function HeroText() {
 
   return (
     <div ref={ref}>
-      <h1
-        style={{
-          fontFamily: 'var(--font-display)',
-          fontSize: 'clamp(56px, 8vw, 110px)',
-          lineHeight: 1.0,
-          fontWeight: 800,
-          letterSpacing: '-0.04em',
-          textAlign: 'left',
-          marginBottom: '20px',
-        }}
-      >
+      <h1 className="font-display text-[#1c1c1c] font-semibold text-5xl md:text-7xl lg:text-[80px] leading-tight tracking-tight mb-2">
         <EditableText 
           id="hero-name" 
           defaultText="Bhavna Ambudkar" 
-          className="hero-word text-transparent bg-clip-text bg-gradient-to-br from-gray-900 to-gray-500" 
+          className="hero-word" 
           style={wordStyle} 
         />
       </h1>

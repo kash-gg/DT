@@ -16,27 +16,29 @@ export default function ProjectsPage() {
 
   return (
     <>
-      {/* ─── HERO ─── */}
-      <section style={{ padding: '80px 0 60px', borderBottom: '1px solid #0a0a0a' }}>
+      <section className="pt-32 pb-16 border-b border-[#e0ddd6]">
         <div className="container">
-          <p style={{ fontSize: 11, fontWeight: 300, textTransform: 'uppercase', letterSpacing: '0.2em', marginBottom: 24 }}>
-            Selected Work
-          </p>
-          <h1 style={{ fontSize: 'clamp(48px, 7vw, 100px)', fontWeight: 700, lineHeight: 1 }}>
-            Projects &amp; <em style={{ fontStyle: 'italic', fontWeight: 300 }}>Initiatives</em>
-          </h1>
+          <div className="max-w-3xl">
+            <p className="text-sm font-semibold tracking-widest uppercase text-[var(--scheme-accent)] mb-4">
+              Selected Work
+            </p>
+            <h1 className="font-display text-5xl md:text-7xl font-semibold text-[#1c1c1c] mb-6 leading-tight">
+              Projects & <span className="font-light italic">Initiatives</span>
+            </h1>
+            <p className="text-xl text-[#666] leading-relaxed">
+              Explore key initiatives shaping the future of engineering education, institutional innovation, and student entrepreneurship.
+            </p>
+          </div>
         </div>
       </section>
 
-
-      {/* ─── FILTER TABS ─── */}
-      <section style={{ padding: '40px 0', borderBottom: '1px solid #0a0a0a' }}>
+      <section className="py-6 border-b border-[#e0ddd6] bg-white">
         <div className="container">
-          <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
+          <div className="flex gap-4 flex-wrap">
             {FILTERS.map(f => (
               <button
                 key={f}
-                className={`filter-tab${active === f ? ' active' : ''}`}
+                className={`px-4 py-2 text-sm font-medium border transition-colors rounded-sm ${active === f ? 'bg-[#1c1c1c] text-white border-[#1c1c1c]' : 'bg-transparent text-[#666] border-[#e0ddd6] hover:border-[#1c1c1c]'}`}
                 onClick={() => setActive(f)}
               >
                 {f}
@@ -46,16 +48,9 @@ export default function ProjectsPage() {
         </div>
       </section>
 
-      {/* ─── PROJECTS GRID ─── */}
-      <section className="section-pad">
+      <section className="section-pad bg-[#f2f0eb]">
         <div className="container">
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))',
-              gap: 0,
-            }}
-          >
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filtered.map(project => (
               <ProjectCard key={project.id} project={project} />
             ))}

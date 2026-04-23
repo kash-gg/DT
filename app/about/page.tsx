@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import ScrollReveal from '@/components/ScrollReveal';
-import MarqueeButton from '@/components/MarqueeButton';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'About',
@@ -236,8 +236,8 @@ export default function AboutPage() {
           </div>
 
           <div style={{ marginTop: 80, display: 'flex', gap: 16 }}>
-            <MarqueeButton label="View Research →" href="/research" />
-            <MarqueeButton label="Let's Collaborate →" href="/contact" />
+            <Link href="/research" className="academic-btn">View Research</Link>
+            <Link href="/contact" className="academic-btn-outline">Let's Collaborate</Link>
           </div>
         </div>
       </section>

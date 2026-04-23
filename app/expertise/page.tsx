@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import ExpertiseCard from '@/components/ExpertiseCard';
-import ScrollReveal from '@/components/ScrollReveal';
-import MarqueeButton from '@/components/MarqueeButton';
 import { expertise } from '@/lib/data';
 
 export const metadata: Metadata = {
@@ -12,27 +11,25 @@ export const metadata: Metadata = {
 export default function ExpertisePage() {
   return (
     <>
-      {/* ─── HERO ─── */}
-      <section style={{ padding: '80px 0 60px', borderBottom: '1px solid #0a0a0a' }}>
+      <section className="pt-32 pb-16 border-b border-[#e0ddd6]">
         <div className="container">
-          <ScrollReveal>
-            <p style={{ fontSize: 11, fontWeight: 300, textTransform: 'uppercase', letterSpacing: '0.2em', marginBottom: 24 }}>
+          <div className="max-w-3xl">
+            <p className="text-sm font-semibold tracking-widest uppercase text-[var(--scheme-accent)] mb-4">
               What I Do
             </p>
-            <h1 style={{ fontSize: 'clamp(48px, 7vw, 100px)', fontWeight: 700, lineHeight: 1 }}>
-              Areas of <em style={{ fontStyle: 'italic', fontWeight: 300 }}>Expertise</em>
+            <h1 className="font-display text-5xl md:text-7xl font-semibold text-[#1c1c1c] mb-6 leading-tight">
+              Areas of <span className="font-light italic">Expertise</span>
             </h1>
-          </ScrollReveal>
+            <p className="text-xl text-[#666] leading-relaxed">
+              Bridging engineering education, design thinking, and human-centered innovation through 25+ years of pedagogical and academic research.
+            </p>
+          </div>
         </div>
       </section>
 
-
-      {/* ─── GRID ─── */}
       <section className="section-pad">
         <div className="container">
-          <div
-            style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(500px, 1fr))', gap: 0 }}
-          >
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {expertise.map(card => (
               <ExpertiseCard key={card.id} card={card} />
             ))}
@@ -40,20 +37,21 @@ export default function ExpertisePage() {
         </div>
       </section>
 
-      {/* ─── CTA ─── */}
-      <section style={{ borderTop: '1px solid #0a0a0a', padding: '80px 0' }}>
+      <section className="section-pad border-t border-[#e0ddd6] bg-white">
         <div className="container">
-          <ScrollReveal>
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 32 }}>
-              <h2 style={{ fontSize: 'clamp(32px, 4vw, 56px)', fontWeight: 700, lineHeight: 1.1 }}>
-                Interested in a <em style={{ fontStyle: 'italic', fontWeight: 300 }}>Workshop?</em>
-              </h2>
-              <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
-                <MarqueeButton label="View Workshops →" href="/workshops" />
-                <MarqueeButton label="Get In Touch →" href="/contact" />
-              </div>
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-8">
+            <h2 className="font-display text-3xl md:text-4xl font-semibold text-[#1c1c1c]">
+              Interested in a <span className="font-light italic">Workshop?</span>
+            </h2>
+            <div className="flex gap-4">
+              <Link href="/workshops" className="academic-btn-outline">
+                View Workshops
+              </Link>
+              <Link href="/contact" className="academic-btn">
+                Get In Touch
+              </Link>
             </div>
-          </ScrollReveal>
+          </div>
         </div>
       </section>
     </>

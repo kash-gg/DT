@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import ScrollReveal from '@/components/ScrollReveal';
-import MarqueeButton from '@/components/MarqueeButton';
 
 const SUBJECTS = [
   'Collaboration',
@@ -35,153 +34,133 @@ export default function ContactPage() {
 
   return (
     <>
-      {/* ─── HERO ─── */}
-      <section style={{ padding: '80px 0 60px', borderBottom: '1px solid #0a0a0a' }}>
+      <section className="pt-32 pb-16 border-b border-[#e0ddd6]">
         <div className="container">
-          <ScrollReveal>
-            <h1
-              style={{
-                fontSize: 'clamp(40px, 8vw, 120px)',
-                fontWeight: 700,
-                lineHeight: 1,
-                marginBottom: 8,
-              }}
-            >
-              Let&apos;s build something{' '}
-              <em style={{ fontStyle: 'italic', fontWeight: 300 }}>meaningful</em>
+          <div className="max-w-3xl">
+            <h1 className="font-display text-5xl md:text-7xl font-semibold text-[#1c1c1c] mb-4 leading-tight">
+              Let's build something <span className="font-light italic">meaningful</span> together.
             </h1>
-            <p style={{ fontSize: 'clamp(40px, 8vw, 120px)', fontWeight: 300, fontStyle: 'italic', lineHeight: 1 }}>
-              together.
-            </p>
-          </ScrollReveal>
+          </div>
         </div>
       </section>
 
-
-      {/* ─── CONTACT LAYOUT ─── */}
       <section className="section-pad">
         <div className="container">
-          <div
-            className="two-col-grid"
-            style={{ alignItems: 'start' }}
-          >
+          <div className="grid md:grid-cols-2 gap-16 items-start">
             {/* Left: Info */}
-            <ScrollReveal>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 32 }}>
-                <div>
-                  <p style={{ fontSize: 11, fontWeight: 300, textTransform: 'uppercase', letterSpacing: '0.15em', marginBottom: 16 }}>
-                    Email
-                  </p>
-                  <a
-                    href="mailto:bhavna.ambudkar@sitpune.edu.in"
-                    className="slide-link"
-                    style={{ fontSize: 18, fontWeight: 700 }}
-                  >
-                    bhavna.ambudkar@sitpune.edu.in
-                  </a>
-                </div>
-
-                <div>
-                  <p style={{ fontSize: 11, fontWeight: 300, textTransform: 'uppercase', letterSpacing: '0.15em', marginBottom: 16 }}>
-                    LinkedIn
-                  </p>
-                  <a
-                    href="https://www.linkedin.com/in/bhavna-ambudkar-2683a919/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="slide-link"
-                    style={{ fontSize: 18, fontWeight: 700 }}
-                  >
-                    linkedin.com/in/bhavna-ambudkar ↗
-                  </a>
-                </div>
-
-                <div className="divider" />
-
-                <div>
-                  <p style={{ fontSize: 11, fontWeight: 300, textTransform: 'uppercase', letterSpacing: '0.15em', marginBottom: 8 }}>
-                    Institution
-                  </p>
-                  <p style={{ fontSize: 16, fontWeight: 300, lineHeight: 1.6 }}>
-                    Symbiosis Institute of Technology<br />
-                    Lavale, Pune 412115<br />
-                    Maharashtra, India
-                  </p>
-                </div>
-
-                <div>
-                  <p style={{ fontSize: 11, fontWeight: 300, textTransform: 'uppercase', letterSpacing: '0.15em', marginBottom: 8 }}>
-                    Office Hours
-                  </p>
-                  <p style={{ fontSize: 16, fontWeight: 300 }}>
-                    Mon–Fri, 10AM–5PM IST
-                  </p>
-                </div>
+            <div className="flex flex-col gap-10">
+              <div>
+                <p className="text-xs font-semibold tracking-widest uppercase text-[#666] mb-2">
+                  Email
+                </p>
+                <a
+                  href="mailto:bhavna.ambudkar@sitpune.edu.in"
+                  className="text-xl font-medium text-[#1c1c1c] hover:text-[var(--scheme-accent)] transition-colors"
+                >
+                  bhavna.ambudkar@sitpune.edu.in
+                </a>
               </div>
-            </ScrollReveal>
+
+              <div>
+                <p className="text-xs font-semibold tracking-widest uppercase text-[#666] mb-2">
+                  LinkedIn
+                </p>
+                <a
+                  href="https://www.linkedin.com/in/bhavna-ambudkar-2683a919/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xl font-medium text-[#1c1c1c] hover:text-[var(--scheme-accent)] transition-colors"
+                >
+                  linkedin.com/in/bhavna-ambudkar ↗
+                </a>
+              </div>
+
+              <div className="divider" />
+
+              <div>
+                <p className="text-xs font-semibold tracking-widest uppercase text-[#666] mb-3">
+                  Institution
+                </p>
+                <p className="text-base text-[#1c1c1c] leading-relaxed">
+                  Symbiosis Institute of Technology<br />
+                  Lavale, Pune 412115<br />
+                  Maharashtra, India
+                </p>
+              </div>
+
+              <div>
+                <p className="text-xs font-semibold tracking-widest uppercase text-[#666] mb-3">
+                  Office Hours
+                </p>
+                <p className="text-base text-[#1c1c1c]">
+                  Mon–Fri, 10AM–5PM IST
+                </p>
+              </div>
+            </div>
 
             {/* Right: Form */}
-            <ScrollReveal>
+            <div>
               {submitted ? (
-                <div style={{ border: '2px solid #0a0a0a', padding: 64, textAlign: 'center' }}>
-                  <p style={{ fontSize: 48, marginBottom: 16 }}>✦</p>
-                  <h3 style={{ fontSize: 28, fontWeight: 700, marginBottom: 16 }}>Message Received</h3>
-                  <p style={{ fontSize: 16, fontWeight: 300 }}>
-                    Thank you for reaching out. I&apos;ll get back to you within 2 working days.
+                <div className="border border-[#e0ddd6] bg-white p-12 text-center rounded-sm">
+                  <p className="text-[var(--scheme-accent)] text-4xl font-serif mb-6">✦</p>
+                  <h3 className="font-display text-2xl font-semibold mb-4 text-[#1c1c1c]">Message Received</h3>
+                  <p className="text-[#666]">
+                    Thank you for reaching out. I'll get back to you within 2 working days.
                   </p>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} noValidate style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
+                <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-6 bg-white p-8 border border-[#e0ddd6] rounded-sm">
                   <div>
                     <input
                       type="text"
                       placeholder="Your Name"
-                      className="form-field"
+                      className="w-full bg-[#faf9f6] border border-[#e0ddd6] px-4 py-3 rounded-sm focus:outline-none focus:border-[#1c1c1c] transition-colors"
                       value={form.name}
                       onChange={e => setForm({ ...form, name: e.target.value })}
                     />
-                    {errors.name && <p style={{ fontSize: 12, color: 'var(--cinnabar)', marginTop: 4 }}>{errors.name}</p>}
+                    {errors.name && <p className="text-xs text-[var(--scheme-accent)] mt-2">{errors.name}</p>}
                   </div>
 
                   <div>
                     <input
                       type="email"
                       placeholder="Your Email"
-                      className="form-field"
+                      className="w-full bg-[#faf9f6] border border-[#e0ddd6] px-4 py-3 rounded-sm focus:outline-none focus:border-[#1c1c1c] transition-colors"
                       value={form.email}
                       onChange={e => setForm({ ...form, email: e.target.value })}
                     />
-                    {errors.email && <p style={{ fontSize: 12, color: 'var(--cinnabar)', marginTop: 4 }}>{errors.email}</p>}
+                    {errors.email && <p className="text-xs text-[var(--scheme-accent)] mt-2">{errors.email}</p>}
                   </div>
 
                   <div>
                     <select
-                      className="form-field"
+                      className="w-full bg-[#faf9f6] border border-[#e0ddd6] px-4 py-3 rounded-sm focus:outline-none focus:border-[#1c1c1c] transition-colors appearance-none"
                       value={form.subject}
                       onChange={e => setForm({ ...form, subject: e.target.value })}
                     >
                       <option value="">Select Subject</option>
                       {SUBJECTS.map(s => <option key={s} value={s}>{s}</option>)}
                     </select>
-                    {errors.subject && <p style={{ fontSize: 12, color: 'var(--cinnabar)', marginTop: 4 }}>{errors.subject}</p>}
+                    {errors.subject && <p className="text-xs text-[var(--scheme-accent)] mt-2">{errors.subject}</p>}
                   </div>
 
                   <div>
                     <textarea
                       placeholder="Your Message"
-                      className="form-field"
+                      className="w-full bg-[#faf9f6] border border-[#e0ddd6] px-4 py-3 rounded-sm focus:outline-none focus:border-[#1c1c1c] transition-colors resize-y"
                       rows={6}
                       value={form.message}
                       onChange={e => setForm({ ...form, message: e.target.value })}
-                      style={{ resize: 'vertical' }}
                     />
-                    {errors.message && <p style={{ fontSize: 12, color: 'var(--cinnabar)', marginTop: 4 }}>{errors.message}</p>}
+                    {errors.message && <p className="text-xs text-[var(--scheme-accent)] mt-2">{errors.message}</p>}
                   </div>
 
-                  <MarqueeButton label="Send Message →" type="submit" className="w-full justify-center" />
+                  <button type="submit" className="academic-btn w-full mt-2">
+                    Send Message
+                  </button>
                 </form>
               )}
-            </ScrollReveal>
+            </div>
           </div>
         </div>
       </section>

@@ -10,24 +10,19 @@ const config: Config = {
     extend: {
       colors: {
         'scheme-bg': 'var(--scheme-bg)',
-        'black-ink': '#0a0a0a',
-        'cinnabar': '#e8464e',
-        'fall-green': '#dae8b6',
-        'blue-chalk': '#dcd5ea',
-        'misty-rose': '#ffd3f1',
-        'glass-white': 'rgba(255, 255, 255, 0.05)',
-        'glass-border': 'rgba(255, 255, 255, 0.1)',
-        'accent-cyan': '#00f2fe',
-        'accent-blue': '#4facfe',
+        'scheme-text': 'var(--scheme-text)',
+        'scheme-border': 'var(--scheme-border)',
+        'scheme-accent': 'var(--scheme-accent)',
+        'black-ink': '#1c1c1c',
+        'off-white': '#faf9f6',
+        'muted-maroon': '#8c2d3a',
+        'muted-teal': '#2c5f63',
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
-        display: ['Outfit', 'sans-serif'],
+        serif: ['"Playfair Display"', 'serif'],
+        display: ['"Playfair Display"', 'serif'],
       },
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-primary': 'linear-gradient(to right, #4facfe 0%, #00f2fe 100%)',
-      }
     },
   },
   plugins: [],

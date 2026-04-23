@@ -1,10 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import { ColorSchemeProvider } from '@/components/ColorSchemeContext';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
-import CustomCursor from '@/components/CustomCursor';
-import PageCurtain from '@/components/PageCurtain';
 import PageTransitionWrapper from '@/components/PageTransitionWrapper';
 import GSAPScrollInit from '@/components/GSAPScrollInit';
 import { EditModeProvider } from '@/components/EditModeContext';
@@ -32,16 +29,12 @@ export default async function RootLayout({ children }: { children: React.ReactNo
     <html lang="en">
       <body>
         <EditModeProvider initialContent={initialContent}>
-          <ColorSchemeProvider>
-            <CustomCursor />
-            <PageCurtain />
-            <Nav />
-            <GSAPScrollInit />
-            <PageTransitionWrapper>
-              <main>{children}</main>
-            </PageTransitionWrapper>
-            <Footer />
-          </ColorSchemeProvider>
+          <Nav />
+          <GSAPScrollInit />
+          <PageTransitionWrapper>
+            <main>{children}</main>
+          </PageTransitionWrapper>
+          <Footer />
         </EditModeProvider>
       </body>
     </html>
