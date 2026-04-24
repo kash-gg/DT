@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import ScrollReveal from '@/components/ScrollReveal';
 
 const SUBJECTS = [
   'Collaboration',
@@ -38,7 +37,7 @@ export default function ContactPage() {
         <div className="container">
           <div className="max-w-3xl">
             <h1 className="font-display text-5xl md:text-7xl font-semibold text-[#1c1c1c] mb-4 leading-tight">
-              Let's build something <span className="font-light italic">meaningful</span> together.
+              Let&apos;s build something <span className="font-light italic">meaningful</span> together.
             </h1>
           </div>
         </div>
@@ -105,7 +104,7 @@ export default function ContactPage() {
                   <p className="text-[var(--scheme-accent)] text-4xl font-serif mb-6">✦</p>
                   <h3 className="font-display text-2xl font-semibold mb-4 text-[#1c1c1c]">Message Received</h3>
                   <p className="text-[#666]">
-                    Thank you for reaching out. I'll get back to you within 2 working days.
+                    Thank you for reaching out. I&apos;ll get back to you within 2 working days.
                   </p>
                 </div>
               ) : (

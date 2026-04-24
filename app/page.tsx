@@ -1,9 +1,8 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import ScrollReveal from '@/components/ScrollReveal';
 import HeroText from '@/components/HeroText';
 import EditableText from '@/components/EditableText';
-import { expertise, publications, workshops } from '@/lib/data';
+import { expertise, publications } from '@/lib/data';
 
 export const metadata: Metadata = {
   title: 'Bhavna Ambudkar — Design Thinking Professor',

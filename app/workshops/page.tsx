@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import WorkshopPill from '@/components/WorkshopPill';
-import ScrollReveal from '@/components/ScrollReveal';
 import { workshops } from '@/lib/data';
 
 export const metadata: Metadata = {

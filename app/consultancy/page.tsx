@@ -162,9 +162,9 @@ export default function ConsultancyPage() {
                 <div className="w-16 h-16 mx-auto bg-[#faf9f6] rounded-full flex items-center justify-center text-2xl text-[var(--scheme-accent)] mb-6">
                   ✉
                 </div>
-                <h2 className="text-3xl font-display font-semibold mb-4">Let's Build Together</h2>
+                <h2 className="text-3xl font-display font-semibold mb-4">Let&apos;s Build Together</h2>
                 <p className="text-[#666] mb-8 max-w-md mx-auto">
-                  Whether you need a keynote speaker, an ecosystem architect, or a design thinking facilitator—let's discuss how we can create impact.
+                  Whether you need a keynote speaker, an ecosystem architect, or a design thinking facilitator—let&apos;s discuss how we can create impact.
                 </p>
                 <Link href="/contact" className="academic-btn inline-flex">
                   Invite for Collaboration

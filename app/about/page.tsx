@@ -237,7 +237,7 @@ export default function AboutPage() {
 
           <div style={{ marginTop: 80, display: 'flex', gap: 16 }}>
             <Link href="/research" className="academic-btn">View Research</Link>
-            <Link href="/contact" className="academic-btn-outline">Let's Collaborate</Link>
+            <Link href="/contact" className="academic-btn-outline">Let&apos;s Collaborate</Link>
           </div>
         </div>
       </section>
