@@ -78,12 +78,6 @@ export default function Footer() {
         >
           © 2025 Bhavna Ambudkar
         </span>
-        <span
-          className="text-xs uppercase tracking-wider"
-          style={{ fontWeight: 300, letterSpacing: '0.1em' }}
-        >
-          Design inspired by Miranda Biondi
-        </span>
       </div>
     </footer>
   );

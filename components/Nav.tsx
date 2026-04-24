@@ -6,12 +6,15 @@ import { usePathname } from 'next/navigation';
 import { useEditMode } from './EditModeContext';
 
 const NAV_LINKS = [
-  { label: 'About',      href: '/about' },
-  { label: 'Expertise',  href: '/expertise' },
-  { label: 'Research',   href: '/research' },
-  { label: 'Workshops',  href: '/workshops' },
-  { label: 'Blog',       href: '/blog' },
-  { label: 'Contact',    href: '/contact' },
+  { label: 'About',       href: '/about' },
+  { label: 'Expertise',   href: '/expertise' },
+  { label: 'Mentorship',  href: '/mentorship' },
+  { label: 'Advisory',    href: '/consultancy' },
+  { label: 'Research',    href: '/research' },
+  { label: 'Workshops',   href: '/workshops' },
+  { label: 'Recognition', href: '/recognition' },
+  { label: 'Blog',        href: '/blog' },
+  { label: 'Contact',     href: '/contact' },
 ];
 
 export default function Nav() {
@@ -22,14 +25,14 @@ export default function Nav() {
   return (
     <>
       <header className="fixed top-0 left-0 w-full z-50 bg-[#faf9f6] border-b border-[#e0ddd6] transition-all duration-400">
-        <div className="container h-16 flex items-center justify-between">
+        <div className="max-w-[1440px] mx-auto px-6 md:px-12 h-16 flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="font-display font-semibold text-lg tracking-tight text-[#1c1c1c]">
             Bhavna Ambudkar
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden xl:flex items-center gap-10">
             {NAV_LINKS.map(({ label, href }) => (
               <Link
                 key={href}
